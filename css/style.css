@@ -1,0 +1,93 @@
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+}
+
+.navbar-content{
+    display: flex;
+    margin-left: auto;
+    width: 80%;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* slider */
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider{
+    background-color: #2196F3;
+    
+}
+
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+#night{
+    margin: 0 0px 0 -25px;
+    display: none;
+}
+
+#morning{
+    /* display: none; */
+    margin: 0 0 0 63px;
+    bottom: 18px;
+    left: 6px;
+    /* top: 10px; */
+    position: relative;
+}
+
+.navbar-content ul{
+    list-style-type: none;
+    display: flex;
+    /* margin-left: auto; */
+}
+
+.navbar-content a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar-content a:hover{
+    color: yellow;
+}
